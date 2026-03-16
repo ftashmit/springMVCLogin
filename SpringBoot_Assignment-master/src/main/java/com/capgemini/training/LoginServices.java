@@ -1,0 +1,15 @@
+package com.capgemini.training;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class LoginServices {
+
+	@Autowired
+	LoginRepository loginRepository;
+	
+	public UserEntity registerUser(UserEntity userEntity) {
+		return loginRepository.save(userEntity);
+	}
+}
